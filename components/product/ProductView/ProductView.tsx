@@ -55,6 +55,27 @@ const ProductView: FC<Props> = ({ product }) => {
       setLoading(false)
     }
   }
+  
+  
+  window.dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+  window.dataLayer.push({
+    'event': 'productClick',
+    'ecommerce': {
+      'detail': {   // Optional list property.
+        'products': [{
+          'name': product.name,                      // Name or ID is required.
+          'id': product.id,
+          'price': product.price,
+          'brand': product.brand,
+          'category': product.cat,
+          'variant': product.variant,
+          'position': product.position
+         }]
+       }
+     },
+     'eventCallback': function() {
+       document.location = productObj.url
+     }
 
   return (
     <Container className="max-w-none w-full" clean>
