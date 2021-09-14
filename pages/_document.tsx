@@ -4,7 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-  <script
+         <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
@@ -20,6 +20,21 @@ class MyDocument extends Document {
           `,
             }}
           />
+        
+           <script
+            dangerouslySetInnerHTML={{
+              __html: `  
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202369355-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-202369355-1');
+          </script>`
+             }}
+          />
+
+
         <Head />
         <body className="loading">
           <Main />
