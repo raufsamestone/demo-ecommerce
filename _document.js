@@ -10,11 +10,6 @@ export default class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
-
-           <script
-              async
-            src='https://www.googletagmanager.com/gtag/js?id=UA-202369355-1'
-            />
           
           <script
             dangerouslySetInnerHTML={{
@@ -22,27 +17,27 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', 'UA-202369355-1' {
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}' {
               page_path: window.location.pathname,
             });
           `,
             }}
           />
           
-     
           <script
             dangerouslySetInnerHTML={{
-              __html: `
+              __html: `  
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202369355-1"></script>
+          <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config','UA-202369355-1' {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-           />
-       
+            gtag('config', 'UA-202369355-1');
+          </script>`
+             }}
+          />
+
+        
         </Head>
         <body>
           <Main />
