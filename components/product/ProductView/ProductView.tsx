@@ -57,8 +57,8 @@ const ProductView: FC<Props> = ({ product }) => {
   }
   
   
-  dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-   dataLayer.push({
+  window.dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+   window.dataLayer.push({
     'ecommerce': {
       'detail': {
         'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
