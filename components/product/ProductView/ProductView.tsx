@@ -68,7 +68,7 @@ const ProductView: FC<Props> = ({ product }) => {
           'price': product.price
          }]
        }
-     }
+     });
   return (
     <Container className="max-w-none w-full" clean>
       <NextSeo
