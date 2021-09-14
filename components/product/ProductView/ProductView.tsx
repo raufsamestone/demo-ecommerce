@@ -57,26 +57,18 @@ const ProductView: FC<Props> = ({ product }) => {
   }
   
   
-  window.dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-  window.dataLayer.push({
-    'event': 'productClick',
+  dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+   dataLayer.push({
     'ecommerce': {
-      'detail': {   // Optional list property.
+      'detail': {
+        'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
         'products': [{
-          'name': product.name,                      // Name or ID is required.
-          'id': product.id,
-          'price': product.price,
-          'brand': product.brand,
-          'category': product.cat,
-          'variant': product.variant,
-          'position': product.position
+          'name': product.name,         // Name or ID is required.
+          'id': 'product.id,
+          'price': product.price
          }]
        }
-     },
-     'eventCallback': function() {
-       document.location = productObj.url
      }
-
   return (
     <Container className="max-w-none w-full" clean>
       <NextSeo
