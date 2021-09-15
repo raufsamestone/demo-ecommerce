@@ -56,10 +56,21 @@ const ProductView: FC<Props> = ({ product }) => {
     }
   }
       
- console.log('window.datalayer')
+ console.log(window.datalayer)
+  
+      
   
   return (
     <Container className="max-w-none w-full" clean>
+        <script
+            async
+            dangerouslySetInnerHTML={{
+              __html: `TEST;
+                
+
+`
+            }}
+          />
       <NextSeo
         title={product.name}
         description={product.description}
