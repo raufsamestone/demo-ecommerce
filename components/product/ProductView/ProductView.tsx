@@ -72,15 +72,14 @@ dataLayer.push({
       'actionField': {'list': 'Product List'},
       'products': [{
         'name': '${product.name}',         
-        'id': 'Product ID',
-        'price': '12'
+        'id': '${product.id}',
+        'price': '${product.price}'
        }]
      }
    }
 });
-
 ` }}
-          />
+  />
       
       
       <NextSeo
