@@ -24,24 +24,6 @@ const ProductCard: FC<Props> = ({
 }) => (
   <Link href={`/product/${product.slug}`} {...props}>
     
-            <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
-  dataLayer.push({
-  'ecommerce': {
-    'currencyCode': '${product.price.currencyCode}',                      
-    'impressions': [
-     {
-       'name': '${product.name}',      
-       'id': '${product.id}',
-       'price': '${product.price.value}',
-       'list': 'Product List',
-     }
-     ]
-  }
-` }}
-  />
     <a className={cn(s.root, { [s.simple]: variant === 'simple' }, className)}>
       {variant === 'slim' ? (
         <div className="relative overflow-hidden box-border">
