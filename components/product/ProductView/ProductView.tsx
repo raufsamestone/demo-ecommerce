@@ -64,8 +64,20 @@ const ProductView: FC<Props> = ({ product }) => {
         <script
             async
             dangerouslySetInnerHTML={{
-              __html: `TEST;
-                
+              __html: `
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  'event': 'removeFromCart',
+  'ecommerce': {
+    'remove': {                               // 'remove' actionFieldObject measures.
+      'products': [{                          //  removing a product to a shopping cart.
+          'name': product.name,
+          'id': product.id,
+          'price': product.price,
+      }]
+    }
+  }
+});
 
 `
             }}
