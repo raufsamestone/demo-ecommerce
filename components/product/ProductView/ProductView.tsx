@@ -56,9 +56,8 @@ const ProductView: FC<Props> = ({ product }) => {
     }
   }
       
- console.log(window.datalayer)
   
-      
+    
   
   return (
     <Container className="max-w-none w-full" clean>
