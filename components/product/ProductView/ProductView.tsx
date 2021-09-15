@@ -61,18 +61,18 @@ const ProductView: FC<Props> = ({ product }) => {
   
   return (
     <Container className="max-w-none w-full" clean>
+      
         <script
             async
             dangerouslySetInnerHTML={{
               __html: `
-dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
   'ecommerce': {
     'detail': {
       'actionField': {'list': 'Product List'},
       'products': [{
         'name': product.name,         
-        'id': product.id,
+        'id': {{product.id}},
         'price': '12'
        }]
      }
