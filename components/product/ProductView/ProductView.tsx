@@ -71,7 +71,7 @@ dataLayer.push({
     'detail': {
       'actionField': {'list': 'Product List'},
       'products': [{
-        'name': `${product.name}`,         
+        'name': '${product.name}',         
         'id': 'Product ID',
         'price': '12'
        }]
