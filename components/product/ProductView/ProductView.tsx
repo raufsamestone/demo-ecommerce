@@ -10,7 +10,6 @@ import usePrice from '@framework/product/use-price'
 import { useAddItem } from '@framework/cart'
 import { getVariant, SelectedOptions } from '../helpers'
 import WishlistButton from '@components/wishlist/WishlistButton'
-import Script from 'next/script'
 
 interface Props {
   children?: any
@@ -56,25 +55,16 @@ const ProductView: FC<Props> = ({ product }) => {
       setLoading(false)
     }
   }
-       
+      
+    <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              TEST
+          `,
+            }}
+          />
   
-  <Script strategy="lazyOnload">
-        {`
-  dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-  dataLayer.push({
-    'ecommerce': {
-      'detail': {
-        'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
-        'products': [{
-          'name': product.name,         // Name or ID is required.
-          'id': product.id,
-          'price': product.price
-         }]
-       }
-     });
-        `}
-      </Script>
-
+  
   return (
     <Container className="max-w-none w-full" clean>
       <NextSeo
