@@ -36,7 +36,6 @@ const ProductCard: FC<Props> = ({
        'name': '${product.name}',      
        'id': '${product.id}',
        'price': '${product.price.value}',
-       'variant': '${product.variants[0]}',
        'list': 'Product List',
      }
      ]
