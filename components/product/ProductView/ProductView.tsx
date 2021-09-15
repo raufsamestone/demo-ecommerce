@@ -73,7 +73,7 @@ dataLayer.push({
       'products': [{
         'name': '${product.name}',         
         'id': '${product.id}',
-        'price': '${product.price}'
+        'price': '${price}'
        }]
      }
    }
