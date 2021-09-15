@@ -71,7 +71,7 @@ dataLayer.push({
     'detail': {
       'actionField': {'list': 'Product List'},
       'products': [{
-        'name': 'Test Product',         
+        'name': `${product.name}`,         
         'id': 'Product ID',
         'price': '12'
        }]
@@ -82,21 +82,6 @@ dataLayer.push({
 ` }}
           />
       
-            <script
-            async>
-dataLayer.push({
-  'ecommerce': {
-    'detail': {
-      'actionField': {'list': 'Product List'},
-      'products': [{
-        'name': product.name,         
-        'id': product.id,
-        'price': product.price
-       }]
-     }
-   }
-});
-          <script/>
       
       <NextSeo
         title={product.name}
