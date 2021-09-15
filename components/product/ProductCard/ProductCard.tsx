@@ -30,7 +30,7 @@ const ProductCard: FC<Props> = ({
               __html: `
   dataLayer.push({
   'ecommerce': {
-    'currencyCode': ${product.price.currencyCode}',                      
+    'currencyCode': '${product.price.currencyCode}',                      
     'impressions': [
      {
        'name': '${product.name}',      
