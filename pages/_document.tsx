@@ -13,7 +13,7 @@ class MyDocument extends Document {
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W54PCZ6');
+})(window,document,'script','dataLayer','GTM-NMHXJ2D');
 <!-- End Google Tag Manager -->
        </script>
           `
@@ -22,6 +22,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <Head />
         <body className="loading">
+         <script
+            dangerouslySetInnerHTML={{
+              __html: `  
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMHXJ2D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+       </script>
+          `
+             }}
+          />
+          
+       
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMHXJ2D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
           <Main />
           <NextScript />
         </body>
