@@ -22,13 +22,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <Head />
         <body className="loading">
-         <script
+         <noscript
             dangerouslySetInnerHTML={{
               __html: `  
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMHXJ2D"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMHXJ2D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
           `
-             }}
+            }}
           />
           
 
