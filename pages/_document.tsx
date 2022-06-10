@@ -27,7 +27,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               __html: `  
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMHXJ2D"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-       </script>
           `
              }}
           />
