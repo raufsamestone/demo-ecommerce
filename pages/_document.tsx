@@ -21,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              }}
           />
         <meta name="google-site-verification" content="i9ZPKp9sc1ZC_RaStvhlqGkSIJ9gFjn8SJPPqJOQxRE" />
-        <script src="http://cdn.usehardal.com/collect.js" data-project-id="056294"></script>
+        <script src="/stats/collect.js" data-project-id="056294"></script>
         <Head />
         <body className="loading">
          <noscript
