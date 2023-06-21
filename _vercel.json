@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/stats/collect.js",
+      "destination": "https://cdn.usehardal.com/collect.js"
+    },
+  ]
+}
