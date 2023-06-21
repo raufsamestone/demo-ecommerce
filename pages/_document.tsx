@@ -31,8 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           `
             }}
           />
-          
-
+          <scrip src="http://cdn.usehardal.com/collect.js" data-project-id="056294"></script>
           <Main />
           <NextScript />
         </body>
