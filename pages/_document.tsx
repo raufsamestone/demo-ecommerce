@@ -50,10 +50,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           name="google-site-verification"
           content="i9ZPKp9sc1ZC_RaStvhlqGkSIJ9gFjn8SJPPqJOQxRE"
         />
-        <script
-          src="https://example.com/stats/collect.js"
-          data-project-id="056294"
-        ></script>
       </Head>
       <body className="loading">
         <noscript
