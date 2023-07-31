@@ -8,6 +8,7 @@ import { Button, Container, Text, useUI } from '@components/ui'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@framework/product/use-price'
 import { useAddItem } from '@framework/cart'
+import SendToHardal from 'hardal'
 import { getVariant, SelectedOptions } from '../helpers'
 import WishlistButton from '@components/wishlist/WishlistButton'
 
@@ -41,7 +42,19 @@ const ProductView: FC<Props> = ({ product }) => {
   }, [])
 
   const variant = getVariant(product, choices)
-
+  const config = {
+    apiKey: '',
+    projectId: 593808,
+    eventType: 'h_add_to_cart',
+    eventValue: '',
+    eventData: {
+      path: typeof window !== 'undefined' ? window.location.pathname : '',
+      referrer: typeof document !== 'undefined' ? document.referrer : '',
+      productId: String(product.id),
+      variantId: String(variant ? variant.id : product.variants[0].id),
+      // Add any properties as needed
+    },
+  }
   const addToCart = async () => {
     setLoading(true)
     try {
@@ -50,22 +63,19 @@ const ProductView: FC<Props> = ({ product }) => {
         variantId: String(variant ? variant.id : product.variants[0].id),
       })
       openSidebar()
+      SendToHardal(config)
       setLoading(false)
     } catch (err) {
       setLoading(false)
     }
   }
-      
-  
-    
-  
+
   return (
     <Container className="max-w-none w-full" clean>
-      
-        <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
+      <script
+        async
+        dangerouslySetInnerHTML={{
+          __html: `
 dataLayer.push({
   'ecommerce': {
     'detail': {
@@ -78,10 +88,10 @@ dataLayer.push({
      }
    }
 });
-` }}
-  />
-      
-      
+`,
+        }}
+      />
+
       <NextSeo
         title={product.name}
         description={product.description}
